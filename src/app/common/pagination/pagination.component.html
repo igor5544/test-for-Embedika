@@ -1,0 +1,11 @@
+<div class="pagination-wrapper">
+  <button class="btn btn--prev" (click)="getPrevPage()" [disabled]="currentPage === 1">
+    prev
+  </button>
+  <span class="page-num">
+    {{currentPage}}
+  </span>
+  <button class="btn btn--next" (click)="getNextPage()" [disabled]="!pageInfo.hasNextPage">
+    next
+  </button>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf="error && error.networkError.status < 500 && error.networkError.status !== 429">
+  <p>
+    {{error.message}}
+  </p>
+</div>

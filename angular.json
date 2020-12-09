@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Embedika"
+  "defaultProject": "Embedika",
+  "cli": {
+    "analytics": "b64f84f5-0d9d-446a-9775-8e483972f30d"
+  }
 }

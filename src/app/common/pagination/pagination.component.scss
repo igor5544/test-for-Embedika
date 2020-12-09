@@ -1,0 +1,53 @@
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  transition: all 0.3s;
+  position: relative;
+  width: 22px;
+  height: 24px;
+  border: none;
+  font-size: 0;
+  background-color: transparent;
+
+  &:disabled::after {
+    border-color: #3c474c;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--decor-color);
+    border-bottom: none;
+    border-left: none;
+  }
+
+  &--prev::after {
+    left: 50%;
+    transform: translate(-25%, -50%) rotate(-135deg);
+  }
+
+  &--next::after {
+    right: 50%;
+    transform: translate(25%, -50%) rotate(45deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-num {
+  padding: 0 16px;
+  font-weight: 500;
+  line-height: 32px;
+}

@@ -1,0 +1,17 @@
+<article class="product-card">
+  <a class="main-link" [routerLink]="['media', productData.id]">
+    <h3 class="title">
+      {{productData.title.romaji}}
+    </h3>
+  </a>
+  <ul class="feature-list">
+    <li class="feature-item">
+      <span class="feature">Type</span>
+      <span class="feature-value">{{productData.type}}</span>
+    </li>
+    <li class="feature-item">
+      <span class="feature">Status</span>
+      <span class="feature-value">{{productData.status}}</span>
+    </li>
+  </ul>
+</article>

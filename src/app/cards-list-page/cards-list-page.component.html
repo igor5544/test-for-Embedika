@@ -1,0 +1,10 @@
+<div class="wrappre">
+  <h1 class="main-title title">
+    {{title}}
+  </h1>
+  <app-cards-list [loading]="loading" [error]="error" [media]="media" [currentPage]="variables.page"
+    [pageInfo]="pageInfo" [getPrevPage]="getPrevPage.bind(this)" [getNextPage]="getNextPage.bind(this)" class="cards">
+  </app-cards-list>
+  <app-filters class="filters" [getBySearch]="getBySearch.bind(this)"
+  [getByType]="getByType.bind(this)" [getByStatus]="getByStatus.bind(this)" [searchVariables]="variables"></app-filters>
+</div>

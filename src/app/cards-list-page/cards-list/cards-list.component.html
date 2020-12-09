@@ -1,0 +1,21 @@
+<section>
+  <app-loading [loading]="loading"></app-loading>
+  <div *ngIf="!loading">
+    <app-error [error]="error"></app-error>
+    <div *ngIf="media && media.length !== 0">
+      <h2 class="visually-hidden">
+        {{title}}
+      </h2>
+      <ul class="cards-list">
+        <li *ngFor="let productData of media" class="cards-item">
+          <app-card-item [productData]="productData"></app-card-item>
+        </li>
+      </ul>
+      <app-pagination [currentPage]="currentPage" [pageInfo]="pageInfo" [getPrevPage]="getPrevPage"
+        [getNextPage]="getNextPage"></app-pagination>
+      <p *ngIf="media.length === 0">
+        По данному запросу ничего не найдено.
+      </p>
+    </div>
+  </div>
+</section>

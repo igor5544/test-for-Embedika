@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import "./variables";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1835px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-title {
+  margin-top: 0;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.main-link {
+  transition: all 0.3s;
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--decor-color);
+    border-bottom: none;
+    border-left: none;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::before {
+    width: 16px;
+    height: 2px;
+    background-color: var(--decor-color);
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.feature-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.feature,
+.feature-value {
+  display: inline-block;
+}
+
+.feature-value {
+  color: var(--decor-color);
+}

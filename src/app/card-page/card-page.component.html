@@ -1,0 +1,25 @@
+<section class="wrapper">
+  <a [routerLink]="['']" class="main-link link-back">
+    Вернуться
+  </a>
+  <app-loading [loading]="loading"></app-loading>
+  <div *ngIf="!loading">
+    <app-error [error]="error"></app-error>
+    <div *ngIf="data && data.length !== 0">
+      <h1 class="main-title">
+        {{data.title.romaji}} <p class="sign">(ориг. {{data.title.native}})</p>
+      </h1>
+      <img [src]="data.bannerImage" alt="baner" *ngIf="data.bannerImage" width="1000" height="370" class="img">
+      <ul class="feature-list">
+        <li *ngFor="let feature of actualData | keyvalue" class="feature-item">
+          <span class="feature"> {{fixTestCase(feature.key)}} </span>
+          <span class="feature-value"> {{feature.value}}</span>
+        </li>
+        <li class="feature-item feature-item--full">
+          <span class="feature"> Description </span>
+          <span class="feature-value" ng-bind-html="text"> {{clearDiscription(data.description)}} </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

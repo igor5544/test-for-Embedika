@@ -1,0 +1,60 @@
+<section class="wrapper">
+  <h2 class="title">
+    {{title}}
+  </h2>
+  <form>
+
+    <label class="label">
+      <span class="label-text" *ngIf="searchVariables.search.length > 0">
+        Название
+      </span>
+      <input type="search" placeholder="Название" class="input" (input)="getBySearch($event)"
+        (ng-model-options)="{ debounce: 2000 }" [value]="searchVariables.search">
+    </label>
+
+    <label class="label">
+      <span class="label-text" *ngIf="searchVariables.status.length > 0">
+        Статус
+      </span>
+      <input type="text" placeholder="Статус" [value]="multipleBtnText" class="input input--only-show"
+        [class.multiple-open]="showMultiple" (click)="toggleMultiple()" (keydown)="toggleMultiple()" readonly>
+    </label>
+
+    <div class="multiple" [class.visually-hidden]="!showMultiple">
+
+      <input type="checkbox" value="FINISHED" (change)="getByStatus($event)" class="custom-input custom-input--checkbox" id="FINISHED" [checked]="searchVariables.status.indexOf('FINISHED') !== -1">
+      <label for="FINISHED" class="multiple-option">Finished</label>
+
+      <input type="checkbox" name="status" value="RELEASING" (change)="getByStatus($event)"
+        class="custom-input custom-input--checkbox" id="RELEASING" [checked]="searchVariables.status.indexOf('RELEASING') !== -1">
+      <label for="RELEASING" class="multiple-option"> Releasing</label>
+
+      <input type="checkbox" name="status" value="NOT_YET_RELEASED" (change)="getByStatus($event)"
+        class="custom-input custom-input--checkbox" id="NOT_YET_RELEASED" [checked]="searchVariables.status.indexOf('NOT_YET_RELEASED') !== -1">
+      <label for="NOT_YET_RELEASED" class="multiple-option">Not yet realeased</label>
+
+      <input type="checkbox" name="status" value="CANCELLED" (change)="getByStatus($event)"
+        class="custom-input custom-input--checkbox" id="CANCELLED" [checked]="searchVariables.status.indexOf('CANCELLED') !== -1">
+      <label for="CANCELLED" class="multiple-option">Cancelled</label>
+
+    </div>
+
+    <p class="bold-label">
+      Тип
+    </p>
+
+    <input type="radio" name="type" value="" [checked]="searchVariables.type === ''" (change)="getByType($event)"
+      class="custom-input custom-input--radio" id="any">
+    <label for="any" class="radio-label">Any</label>
+
+    <input type="radio" name="type" value="ANIME" [checked]="searchVariables.type === 'ANIME'"
+      (change)="getByType($event)" class="custom-input custom-input--radio" id="ANIME">
+    <label for="ANIME" class="radio-label">Anime</label>
+
+
+    <input type="radio" name="type" value="MANGA" [checked]="searchVariables.type === 'MANGA'"
+      (change)="getByType($event)" class="custom-input custom-input--radio" id="MANGA">
+    <label for="MANGA" class="radio-label">Manga</label>
+
+  </form>
+</section>
