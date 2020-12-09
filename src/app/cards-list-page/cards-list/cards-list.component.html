@@ -13,9 +13,9 @@
       </ul>
       <app-pagination [currentPage]="currentPage" [pageInfo]="pageInfo" [getPrevPage]="getPrevPage"
         [getNextPage]="getNextPage"></app-pagination>
-      <p *ngIf="media.length === 0">
-        По данному запросу ничего не найдено.
-      </p>
     </div>
+    <p *ngIf="media && media.length === 0">
+      По данному запросу ничего не найдено.
+    </p>
   </div>
 </section>
