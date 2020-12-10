@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-@import "./variables";
 
 body {
   margin: 0;
@@ -55,7 +54,7 @@ body {
   &::after {
     width: 10px;
     height: 10px;
-    border: 2px solid var(--decor-color);
+    border: 2px solid #2962ff;
     border-bottom: none;
     border-left: none;
     transform: translateY(-50%) rotate(45deg);
@@ -64,7 +63,7 @@ body {
   &::before {
     width: 16px;
     height: 2px;
-    background-color: var(--decor-color);
+    background-color: #2962ff;
     transform: translateY(-50%);
   }
 
@@ -91,5 +90,5 @@ body {
 }
 
 .feature-value {
-  color: var(--decor-color);
+  color: #2962ff;
 }

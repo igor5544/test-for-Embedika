@@ -41,7 +41,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border: none;
   border-bottom: 1px solid #b2b2b2;
   margin-bottom: 50px;
-  caret-color: var(--decor-color);
+  caret-color: #2962ff;
 
   &::placeholder {
     color: #999999;
@@ -49,7 +49,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
   &:focus {
     outline: none;
-    border-color: var(--decor-color);
+    border-color: #2962ff;
   }
 
   &--only-show {
@@ -116,15 +116,15 @@ input[type="search"]::-webkit-search-cancel-button {
   }
 
   &:checked + label::before   {
-    border-color: var(--decor-color);
+    border-color: #2962ff;
   }
 
   &--checkbox:checked + label::before   {
-    background-color: var(--decor-color);
+    background-color: #2962ff;
   }
 
   &--radio:checked + label::after      {
-    background-color: var(--decor-color);
+    background-color: #2962ff;
   }
 
   &:focus + label::before   {
@@ -144,7 +144,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .multiple-open {
   margin-bottom: 0;
-  border-color: var(--decor-color);
+  border-color: #2962ff;
 }
 
 .multiple {
