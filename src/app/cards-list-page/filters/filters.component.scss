@@ -69,14 +69,14 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: pointer;
   }
 
-  + label::before,
-  + label::after {
+  + label::before  ,
+  + label::after      {
     transition: all 0.3s;
     position: absolute;
     content: "";
   }
 
-  + label::before {
+  + label::before   {
     left: 0;
     top: 50%;
     width: 18px;
@@ -85,27 +85,27 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: translateY(-50%);
   }
 
-  + label::after {
+  + label::after      {
     top: 50%;
     transform: translateY(-50%);
   }
 
-  &--checkbox + label::before {
+  &--checkbox + label::before   {
     border-radius: 4px;
   }
 
-  &--radio + label::before,
-  &--radio + label::after {
+  &--radio + label::before  ,
+  &--radio + label::after      {
     border-radius: 50%;
   }
 
-  &--radio + label::after {
+  &--radio + label::after      {
     left: 5px;
     width: 8px;
     height: 8px;
   }
 
-  &--checkbox + label::after {
+  &--checkbox + label::after      {
     left: 4px;
     width: 11px;
     height: 6px;
@@ -115,29 +115,29 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: translateY(-65%) rotate(-50deg);
   }
 
-  &:checked + label::before {
+  &:checked + label::before   {
     border-color: var(--decor-color);
   }
 
-  &--checkbox:checked + label::before {
+  &--checkbox:checked + label::before   {
     background-color: var(--decor-color);
   }
 
-  &--radio:checked + label::after {
+  &--radio:checked + label::after      {
     background-color: var(--decor-color);
   }
 
-  &:focus + label::before {
+  &:focus + label::before   {
     box-shadow: 0 0 5px 1px #4d67fd;
   }
 
-  &:hover + label::before,
-  &:hover + label::after {
+  &:hover + label::before  ,
+  &:hover + label::after      {
     opacity: 0.6;
   }
 
-  &:active + label::before,
-  &:active + label::after {
+  &:active + label::before  ,
+  &:active + label::after      {
     opacity: 0.4;
   }
 }

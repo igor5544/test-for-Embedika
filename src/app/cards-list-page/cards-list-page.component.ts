@@ -7,7 +7,7 @@ import { Apollo, gql } from 'apollo-angular';
   styleUrls: ['./cards-list-page.component.scss']
 })
 
-export class CardsListPageComponent implements OnInit {
+export class CardsListPageComponent implements OnInit, OnDestroy {
   title = 'AniList';
   media: any;
   pageInfo: any;

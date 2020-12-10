@@ -12,18 +12,18 @@
   line-height: 16px;
   color: var(--decor-color);
 
-  &::after,
-  &::before {
+  &::after     ,
+  &::before   {
     left: 0;
   }
 
-  &::after {
+  &::after      {
     width: 8px;
     height: 8px;
     transform: translateY(-50%) rotate(-135deg);
   }
 
-  &::before {
+  &::before   {
     width: 10px;
   }
 
@@ -51,7 +51,7 @@
 }
 
 .feature-item {
-  flex-basis: 50%;
+  flex-basis: 48%;
   padding-right: 10px;
   margin-bottom: 40px;
 

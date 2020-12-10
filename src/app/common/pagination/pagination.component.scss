@@ -12,11 +12,11 @@
   font-size: 0;
   background-color: transparent;
 
-  &:disabled::after {
+  &:disabled::after      {
     border-color: #3c474c;
   }
 
-  &::after {
+  &::after      {
     position: absolute;
     content: '';
     top: 50%;
@@ -27,12 +27,12 @@
     border-left: none;
   }
 
-  &--prev::after {
+  &--prev::after      {
     left: 50%;
     transform: translate(-25%, -50%) rotate(-135deg);
   }
 
-  &--next::after {
+  &--next::after      {
     right: 50%;
     transform: translate(25%, -50%) rotate(45deg);
   }
